@@ -1,20 +1,21 @@
 const experiences = [
   {
     id: 1,
-    period: "May 2025 — Dec 2025",
-    title: "Document Sharing Platform",
-    company: "Frontend Developer",
-    description:
-      "Developed a document sharing platform with features such as authentication, document upload/download, and admin dashboard. Implemented responsive UI using React and optimized performance with lazy loading and memoization.",
-    icon: "code",
-  },
-  {
-    id: 2,
     period: "Feb 2026 - Mar 2026",
     title: "Task Management System",
     company: "Fullstack Developer ",
     description:
       "Developed a fullstack task management system with authentication, real-time updates, and role-based access control using React and Spring Boot.",
+    icon: "code",
+  },
+
+  {
+    id: 2,
+    period: "May 2025 — Dec 2025",
+    title: "Document Sharing Platform",
+    company: "Frontend Developer",
+    description:
+      "Developed a document sharing platform with features such as authentication, document upload/download, and admin dashboard. Implemented responsive UI using React and optimized performance with lazy loading and memoization.",
     icon: "code",
   },
   {
