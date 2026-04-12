@@ -4,7 +4,7 @@ const projects = [
     title: "Document Sharing Platform",
     description:
       "A document sharing platform for students, supporting upload/download of materials and basic content management with a clean and responsive UI.",
-    tags: ["React", "HTML/CSS"],
+    tags: ["React", "HTML/CSS", "Authentication"],
     image: "/project1.png",
     githubBE: "https://github.com/Felix5124/DocumentSharingAPI",
     githubFE: "https://github.com/Felix5124/document-sharing-frontend",
@@ -14,7 +14,7 @@ const projects = [
     title: "Task Management System",
     description:
       "A task management system with role-based access control, helping teams organize tasks and manage workflows efficiently.",
-    tags: ["React", "Tailwind CSS", "Spring Boot"],
+    tags: ["React", "Tailwind CSS", "Spring Boot", "Real-time"],
     image: "/project2.png",
     githubBE: "https://github.com/PHung112/TaskManagement",
   },
@@ -58,7 +58,7 @@ export default function ProjectsSection() {
                   src={project.image}
                 />
               </div>
-              <div className="p-5 space-y-3 flex-grow flex flex-col">
+              <div className="p-5 space-y-4 flex-grow flex flex-col">
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
@@ -72,10 +72,11 @@ export default function ProjectsSection() {
                 <h3 className="text-xl font-semibold text-slate-50">
                   {project.title}
                 </h3>
-                <p className="text-on-surface-variant text-sm leading-relaxed flex-grow">
+                <p className="text-on-surface-variant text-sm leading-relaxed">
                   {project.description}
                 </p>
-                <div className="flex gap-4 pt-4">
+
+                <div className="flex gap-4 pt-3 mt-auto">
                   <a
                     href={project.githubBE}
                     className="flex-1 py-2 px-3 text-center bg-primary-container text-on-primary-container rounded-xl font-bold text-sm hover:opacity-90 active:scale-95 transition-all"

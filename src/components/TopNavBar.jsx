@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 export default function TopNavBar() {
-  const [active, setActive] = useState("hero");
-  const sections = ["hero", "about", "projects", "experience", "contact"];
+  const [active, setActive] = useState("overview");
+  const sections = ["overview", "about", "projects", "experience", "contact"];
   const [underlineStyle, setUnderlineStyle] = useState({
     left: 0,
     width: 0,
@@ -52,15 +52,15 @@ export default function TopNavBar() {
         </div>
         <div className="relative hidden md:flex gap-8 items-center">
           <a
-            id="nav-hero"
-            href="#hero"
+            id="nav-overview"
+            href="#overview"
             className={`pb-1 ${
-              active === "hero"
+              active === "overview"
                 ? "text-indigo-400 "
                 : "text-slate-400 hover:text-slate-100"
             }`}
           >
-            Hero
+            Overview
           </a>
           <a
             id="nav-about"

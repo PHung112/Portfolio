@@ -1,8 +1,8 @@
-export default function HeroSection() {
+export default function OverviewSection() {
   return (
     <section
       className="min-h-screen flex items-center justify-center pt-20 px-8 relative overflow-hidden"
-      id="hero"
+      id="overview"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(79,70,229,0.1),transparent_70%)]"></div>
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">

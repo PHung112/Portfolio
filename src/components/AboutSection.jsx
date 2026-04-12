@@ -1,59 +1,104 @@
-const skills = [
-  { name: "React", icon: "code" },
-  { name: "JavaScript", icon: "javascript" },
-  { name: "HTML5", icon: "html" },
-  { name: "Tailwind", icon: "css" },
-  { name: "Git", icon: "terminal" },
-  { name: "AI Tools", icon: "smart_toy" },
+const skillCategories = [
+  {
+    category: "Languages",
+    skills: [
+      { name: "JavaScript", icon: "javascript" },
+      { name: "HTML5", icon: "html" },
+    ],
+  },
+  {
+    category: "Frontend & Libraries",
+    skills: [{ name: "React", icon: "code" }],
+  },
+  {
+    category: "Styling & UI",
+    skills: [{ name: "Tailwind CSS", icon: "css" }],
+  },
+  {
+    category: "Tools & Utilities",
+    skills: [
+      { name: "Git & GitHub", icon: "terminal" },
+      { name: "AI Tools", icon: "smart_toy" },
+      { name: "Postman", icon: "send" },
+    ],
+  },
 ];
+
 export default function AboutSection() {
   return (
     <section
-      className="flex justify-center items-center min-h-screen py-24 px-8 bg-surface-container-low"
+      className="flex justify-center items-center min-h-screen py-20 px-6 bg-surface-container-low"
       id="about"
     >
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+      <div className="max-w-7xl mx-auto flex flex-col md:grid md:grid-cols-2 gap-10 items-start">
+        {/* LEFT */}
         <div className="space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-50">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-50 leading-tight">
             Building clean and responsive{" "}
             <span className="text-primary">web interfaces.</span>
           </h2>
-          <p className="text-md text-on-surface-variant leading-relaxed">
-            I am a final-year student majoring in Information Technology,
-            currently focusing on frontend development. I have built several web
-            projects using React and Tailwind CSS, with an emphasis on
-            responsive design and clean UI. I am actively seeking an internship
-            opportunity to gain real-world experience and further develop my
-            skills, with a long-term goal of becoming a full-stack developer.
+
+          <p className="text-sm text-on-surface-variant leading-relaxed md:max-w-xl">
+            Final-year IT student focused on frontend development. Experienced
+            in building responsive web apps using React and Tailwind CSS.
+            Currently seeking an internship to gain real-world experience and
+            grow into a full-stack developer.
           </p>
-          <div className="pt-8 grid grid-cols-2 gap-4">
-            <div className="p-6 rounded-2xl bg-surface-container border border-outline-variant/10">
-              <h3 className="text-lg font-bold text-primary">Self-Learning</h3>
-              <p className="text-xs text-on-surface-variant tracking-widest mt-1">
-                Quickly learn new technologies and adapt to different
-                environments
+
+          {/* Soft skills */}
+          <div className="pt-6 grid grid-cols-2 gap-4">
+            <div className="p-5 rounded-2xl bg-surface-container border border-outline-variant/10 hover:border-primary/30 transition">
+              <h3 className="text-base font-semibold text-primary">
+                Self-Learning
+              </h3>
+              <p className="text-xs text-on-surface-variant mt-2 leading-relaxed">
+                Quickly learn new technologies and adapt to new environments.
               </p>
             </div>
-            <div className="p-6 rounded-2xl bg-surface-container border border-outline-variant/10">
-              <h3 className="text-lg font-bold text-primary">
+
+            <div className="p-5 rounded-2xl bg-surface-container border border-outline-variant/10 hover:border-primary/30 transition">
+              <h3 className="text-base font-semibold text-primary">
                 Analytical Thinking
               </h3>
-              <p className="text-xs text-on-surface-variant tracking-widest mt-1">
-                Able to listen, analyze problems, and find effective solutions
+              <p className="text-xs text-on-surface-variant mt-2 leading-relaxed">
+                Analyze problems effectively and find practical solutions.
               </p>
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          {skills.map((skill) => (
-            <div
-              key={skill.name}
-              className="flex flex-col items-center justify-center p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/15 text-center hover:border-primary/40 transition-colors"
-            >
-              <span className="material-symbols-outlined text-4xl text-primary mb-3">
-                {skill.icon}
-              </span>
-              <span className="font-medium text-slate-200">{skill.name}</span>
+
+        {/* RIGHT */}
+        <div className="space-y-8">
+          {skillCategories.map((category) => (
+            <div key={category.category}>
+              <h3 className="text-base font-semibold text-primary tracking-wide uppercase mb-3">
+                {category.category}
+              </h3>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {category.skills.map((skill) => (
+                  <div
+                    key={skill.name}
+                    className={`flex flex-col items-center justify-center p-5 rounded-xl bg-surface-container-lowest border text-center transition-all duration-300
+                      
+                      ${
+                        skill.name === "React" || skill.name === "JavaScript"
+                          ? "border-primary/40 scale-105 shadow-lg shadow-primary/10"
+                          : "border-outline-variant/15"
+                      }
+
+                      hover:border-primary/50 hover:scale-105`}
+                  >
+                    <span className="material-symbols-outlined text-3xl text-primary mb-2">
+                      {skill.icon}
+                    </span>
+
+                    <span className="font-medium text-sm text-slate-200">
+                      {skill.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
