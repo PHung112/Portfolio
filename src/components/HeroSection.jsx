@@ -38,7 +38,7 @@ export default function HeroSection() {
             <div className="absolute -inset-4 bg-primary/20 blur-3xl rounded-full opacity-50 group-hover:opacity-70 transition-opacity"></div>
             <div className="w-72 h-72 md:w-96 md:h-96 rounded-[3rem] overflow-hidden border border-outline-variant/20 relative shadow-2xl">
               <img
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out scale-105 group-hover:scale-100"
+                className="w-full h-full object-cover transition-all duration-700 ease-in-out scale-105 group-hover:scale-100"
                 alt="Modern professional portrait of a young male developer in a dark minimalist studio setting with moody indigo lighting"
                 src="/ai.png"
               />
