@@ -1,16 +1,74 @@
-# React + Vite
+# Tran Dinh Phi Hung - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, Vite, and Tailwind CSS. Showcasing projects, experience, and skills in frontend development.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** - UI Framework
+- **Vite** - Build tool with HMR
+- **Tailwind CSS 3** - Styling
+- **PostCSS** - CSS processing with Autoprefixer
+- **ESLint** - Code quality
 
-## React Compiler
+## 📁 Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+src/
+├── components/
+│   ├── TopNavBar.jsx         # Navigation header
+│   ├── HeroSection.jsx       # Welcome section with intro
+│   ├── AboutSection.jsx      # About me section
+│   ├── ProjectsSection.jsx   # Projects showcase
+│   ├── ExperienceSection.jsx # Work experience
+│   ├── ContactSection.jsx    # Contact information
+│   └── Footer.jsx            # Footer
+├── App.jsx                   # Main app component
+├── main.jsx                  # Entry point
+└── index.css                 # Global styles
+```
 
-## Expanding the ESLint configuration
+## 🛠️ Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v16+)
+- npm or yarn
+
+### Installation & Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm build
+
+# Preview production build
+npm preview
+
+# Run ESLint
+npm lint
+```
+
+Development server will be available at `http://localhost:5173`
+
+## ✨ Features
+
+- **Responsive Design** - Mobile-first approach with Tailwind CSS
+- **Fast Performance** - Optimized with Vite
+- **Dark Theme** - Professional dark color scheme
+- **Smooth Navigation** - Anchor-based section navigation
+- **SEO Optimized** - Semantic HTML structure
+
+## 📄 Sections
+
+- **Hero** - Eye-catching introduction
+- **About** - Personal background and skills
+- **Projects** - Showcase of work and projects
+- **Experience** - Professional experience and timeline
+- **Contact** - Contact information and links
+- **Navigation** - Top navigation bar
+- **Footer** - Footer with links and info
