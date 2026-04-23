@@ -1,25 +1,44 @@
 const skillCategories = [
   {
-    category: "Languages",
+    category: "Frontend",
     skills: [
       { name: "JavaScript", icon: "javascript" },
+      { name: "React", icon: "code" },
+      { name: "Next.js (basic)", icon: "code" },
       { name: "HTML5", icon: "html" },
+      { name: "CSS3", icon: "css" },
+      { name: "Tailwind CSS", icon: "css" },
+      { name: "Responsive Design", icon: "devices" },
     ],
   },
   {
-    category: "Frontend & Libraries",
-    skills: [{ name: "React", icon: "code" }],
+    category: "Backend",
+    skills: [
+      { name: "Java (Spring Boot)", icon: "dns" },
+      { name: "C#", icon: "terminal" },
+      { name: "RESTful API", icon: "api" },
+      { name: "Authentication (JWT/OAuth2)", icon: "lock" },
+      { name: "WebSocket (STOMP)", icon: "sync" },
+    ],
   },
   {
-    category: "Styling & UI",
-    skills: [{ name: "Tailwind CSS", icon: "css" }],
+    category: "Databases",
+    skills: [
+      { name: "MySQL", icon: "storage" },
+      { name: "SQL Server", icon: "storage" },
+      { name: "MongoDB", icon: "storage" },
+      { name: "PostgreSQL", icon: "storage" },
+    ],
   },
   {
-    category: "Tools & Utilities",
+    category: "Tools & Others",
     skills: [
       { name: "Git & GitHub", icon: "terminal" },
-      { name: "AI Tools", icon: "smart_toy" },
       { name: "Postman", icon: "send" },
+      { name: "Swagger", icon: "description" },
+      { name: "Firebase Auth", icon: "cloud" },
+      { name: "Cloudinary", icon: "cloud_upload" },
+      { name: "AI Tools", icon: "smart_toy" },
     ],
   },
 ];

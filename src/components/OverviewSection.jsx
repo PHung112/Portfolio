@@ -15,7 +15,7 @@ export default function OverviewSection() {
               Tran Dinh Phi Hung
             </h1>
             <p className="text-xl md:text-2xl text-on-surface-variant font-light max-w-lg leading-relaxed">
-              Frontend Developer | React | Tailwind CSS
+              Web Developer
             </p>
           </div>
           <div className="flex flex-wrap gap-4">
