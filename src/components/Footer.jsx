@@ -1,25 +1,33 @@
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 w-full py-12 border-t border-slate-800/20">
-      <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="text-lg font-bold text-slate-200">
-          Tran Dinh Phi Hung
-        </div>
-        <p className="font-inter text-sm text-slate-500">
-          © 2026 Developed by Tran Dinh Phi Hung.
+    <footer className="py-8 px-margin_mobile md:px-margin_desktop bg-surface-container-lowest border-t border-surface-container">
+      <div className="max-w-container_max w-full mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p className="text-body-md text-on-surface-variant">
+          © {new Date().getFullYear()} Tran Dinh Phi Hung. Built with React
+          &amp; Tailwind CSS.
         </p>
-        <div className="flex gap-8">
+        <div className="flex items-center gap-6">
           <a
-            className="text-slate-500 hover:text-indigo-400 transition-colors"
             href="https://github.com/PHung112"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium"
           >
-            Github
+            GitHub
           </a>
           <a
-            className="text-slate-500 hover:text-indigo-400 transition-colors"
             href="https://www.linkedin.com/in/tr%E1%BA%A7n-%C4%91%C3%ACnh-phi-h%C3%B9ng-242b94401/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium"
           >
             LinkedIn
+          </a>
+          <a
+            href="#overview"
+            className="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium"
+          >
+            Back to top ↑
           </a>
         </div>
       </div>

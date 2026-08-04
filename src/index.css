@@ -6,10 +6,6 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    color-scheme: dark;
-  }
-
   body {
     font-family: "Inter", sans-serif;
     margin: 0;
@@ -33,20 +29,40 @@
   }
 }
 
-@keyframes progressFill {
-  from {
-    width: 0;
-  }
-  to {
-    width: var(--progress-width);
-  }
+.nav-link.active {
+  color: theme("colors.primary");
+  border-bottom: 2px solid theme("colors.primary");
 }
 
-@layer utilities {
-  .animate-progress {
-    animation: progressFill 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  }
+.glow-effect {
+  position: relative;
 }
+
+.glow-effect::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  background: linear-gradient(
+    45deg,
+    theme("colors.primary"),
+    theme("colors.secondary")
+  );
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  filter: blur(10px);
+}
+
+.glow-effect:hover::before {
+  opacity: 0.15;
+}
+
+.image-glow {
+  box-shadow: 0 0 40px 10px rgba(41, 103, 104, 0.1);
+}
+
 html {
   scroll-behavior: smooth;
 }
+

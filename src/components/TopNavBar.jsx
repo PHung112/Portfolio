@@ -2,21 +2,21 @@ import { useEffect, useState } from "react";
 
 export default function TopNavBar() {
   const [active, setActive] = useState("overview");
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const sections = ["overview", "about", "projects", "experience", "contact"];
-  const [underlineStyle, setUnderlineStyle] = useState({
-    left: 0,
-    width: 0,
-  });
 
   useEffect(() => {
-    const el = document.getElementById(`nav-${active}`);
-    if (el) {
-      setUnderlineStyle({
-        left: el.offsetLeft,
-        width: el.offsetWidth,
-      });
-    }
-  }, [active]);
+    const handleScroll = () => {
+      if (window.pageYOffset > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const observers = sections.map((id) => {
@@ -30,96 +30,106 @@ export default function TopNavBar() {
           }
         },
         {
-          threshold: 0.5,
-        },
+          threshold: 0.3,
+        }
       );
 
       observer.observe(section);
-
       return observer;
     });
 
-    // cleanup
     return () => {
       observers.forEach((obs) => obs && obs.disconnect());
     };
   }, []);
+
   return (
-    <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl shadow-xl shadow-indigo-500/5">
-      <div className=" max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold tracking-tighter text-amber-50 font-inter">
-          Portfolio
-        </div>
-        <div className="relative hidden md:flex gap-8 items-center">
-          <a
-            id="nav-overview"
-            href="#overview"
-            className={`pb-1 ${
-              active === "overview"
-                ? "text-indigo-400 "
-                : "text-slate-400 hover:text-slate-100"
-            }`}
-          >
-            Overview
-          </a>
-          <a
-            id="nav-about"
-            className={`pb-1 ${
-              active === "about"
-                ? "text-indigo-400 "
-                : "text-slate-400 hover:text-slate-100"
-            }`}
-            href="#about"
-          >
-            About
-          </a>
-          <a
-            id="nav-projects"
-            className={`pb-1 ${
-              active === "projects"
-                ? "text-indigo-400 "
-                : "text-slate-400 hover:text-slate-100"
-            }`}
-            href="#projects"
-          >
-            Projects
-          </a>
-          <a
-            id="nav-experience"
-            className={`pb-1 ${
-              active === "experience"
-                ? "text-indigo-400 "
-                : "text-slate-400 hover:text-slate-100"
-            }`}
-            href="#experience"
-          >
-            Experience
-          </a>
-          <a
-            id="nav-contact"
-            className={`pb-1 ${
-              active === "contact"
-                ? "text-indigo-400 "
-                : "text-slate-400 hover:text-slate-100"
-            }`}
-            href="#contact"
-          >
-            Contact
-          </a>
-          <div
-            className="absolute bottom-0 h-[2px] bg-indigo-500 transition-all duration-300 ease-in-out"
-            style={underlineStyle}
-          />
-        </div>
-        <a
-          href="/CV-FrontEnd.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-primary-container text-on-primary-container px-6 py-2 rounded-xl font-semibold hover:opacity-90 transition-all active:scale-95"
-        >
-          Resume
+    <div
+      id="navbar"
+      className={`fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-surface-container-high transition-all duration-300 ${
+        scrolled ? "shadow-md" : ""
+      }`}
+    >
+      <header className="flex items-center justify-between whitespace-nowrap px-margin_mobile md:px-margin_desktop py-4 max-w-container_max mx-auto w-full">
+        <a href="#overview" className="flex items-center gap-4 text-primary">
+          <div className="size-6">
+            <svg
+              fill="none"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+          <h2 className="text-xl font-bold font-display tracking-tight text-on-surface">
+            Portfolio
+          </h2>
         </a>
-      </div>
-    </nav>
+
+        <nav className="hidden md:flex flex-1 justify-end gap-8 items-center">
+          <div className="flex items-center gap-8">
+            {sections.map((id) => (
+              <a
+                key={id}
+                href={`#${id}`}
+                className={`nav-link text-on-surface-variant hover:text-on-surface text-sm font-medium transition-colors py-1 capitalize ${
+                  active === id ? "active" : ""
+                }`}
+              >
+                {id}
+              </a>
+            ))}
+          </div>
+          <a
+            href="/CV-FrontEnd.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center rounded-lg h-10 px-5 bg-primary hover:bg-primary/90 text-on-primary text-sm font-bold transition-colors shadow-sm"
+          >
+            Resume
+          </a>
+        </nav>
+
+        <button
+          aria-label="Menu"
+          className="md:hidden text-on-surface p-1"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          <span className="material-symbols-outlined">
+            {mobileMenuOpen ? "close" : "menu"}
+          </span>
+        </button>
+      </header>
+
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-background border-b border-surface-container-high px-6 py-4 flex flex-col gap-4">
+          {sections.map((id) => (
+            <a
+              key={id}
+              href={`#${id}`}
+              onClick={() => setMobileMenuOpen(false)}
+              className={`nav-link text-on-surface-variant hover:text-on-surface text-base font-medium py-1 capitalize ${
+                active === id ? "active" : ""
+              }`}
+            >
+              {id}
+            </a>
+          ))}
+          <a
+            href="/CV-FrontEnd.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex items-center justify-center rounded-lg h-10 px-5 bg-primary hover:bg-primary/90 text-on-primary text-sm font-bold transition-colors shadow-sm"
+          >
+            Resume
+          </a>
+        </div>
+      )}
+    </div>
   );
 }
+
