@@ -1,34 +1,39 @@
 export default function Footer() {
   return (
-    <footer className="py-8 px-margin_mobile md:px-margin_desktop bg-surface-container-lowest border-t border-surface-container">
-      <div className="max-w-container_max w-full mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-body-md text-on-surface-variant">
-          © {new Date().getFullYear()} Tran Dinh Phi Hung. Built with React
-          &amp; Tailwind CSS.
-        </p>
-        <div className="flex items-center gap-6">
+    <footer className="w-full border-t border-outline-variant bg-surface-container-lowest py-[32px]">
+      <div className="max-w-[1280px] mx-auto px-[32px] flex flex-col md:flex-row justify-between items-center gap-[16px]">
+        <div className="flex flex-col gap-1">
+          <span className="font-headline-lg text-headline-lg text-on-surface">
+            Portfolio System
+          </span>
+          <p className="font-code-md text-code-md text-on-surface-variant">
+            v2.4.0-stable // Built with precision
+          </p>
+        </div>
+        <div className="flex gap-8">
           <a
-            href="https://github.com/PHung112"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium"
+            className="text-on-surface-variant hover:text-primary-fixed-dim transition-colors"
+            href="#"
           >
-            GitHub
+            <span className="material-symbols-outlined">terminal</span>
           </a>
           <a
-            href="https://www.linkedin.com/in/tr%E1%BA%A7n-%C4%91%C3%ACnh-phi-h%C3%B9ng-242b94401/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium"
+            className="text-on-surface-variant hover:text-primary-fixed-dim transition-colors"
+            href="#"
           >
-            LinkedIn
+            <span className="material-symbols-outlined">deployed_code</span>
           </a>
           <a
-            href="#overview"
-            className="text-on-surface-variant hover:text-primary transition-colors text-sm font-medium"
+            className="text-on-surface-variant hover:text-primary-fixed-dim transition-colors"
+            href="#"
           >
-            Back to top ↑
+            <span className="material-symbols-outlined">monitoring</span>
           </a>
+        </div>
+        <div className="text-right">
+          <p className="font-label-sm text-label-sm text-on-surface-variant">
+            © 2026 Systems Architect. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
