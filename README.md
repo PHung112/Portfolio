@@ -8,9 +8,9 @@ A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.
 - **Vite** - Build tool with HMR
 - **Tailwind CSS 3** - Styling
 - **PostCSS** - CSS processing with Autoprefixer
-- **ESLint** - Code quality
+- **ESLint** - Code
 
-## 📁 Project Structure
+## 📁 Project Structure 
 
 ```
 src/
