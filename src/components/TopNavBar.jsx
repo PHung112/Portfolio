@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 
+const SECTIONS = ["overview", "about", "projects", "experience", "contact"];
+
 export default function TopNavBar() {
   const [active, setActive] = useState("overview");
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const sections = ["overview", "about", "projects", "experience", "contact"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,7 +20,7 @@ export default function TopNavBar() {
   }, []);
 
   useEffect(() => {
-    const observers = sections.map((id) => {
+    const observers = SECTIONS.map((id) => {
       const section = document.getElementById(id);
       if (!section) return;
 
@@ -65,13 +66,13 @@ export default function TopNavBar() {
             </svg>
           </div>
           <h2 className="text-xl font-bold font-display tracking-tight text-on-surface">
-            Portfolio
+            Phi Hung <span className="text-primary font-medium text-sm">/ Web Developer</span>
           </h2>
         </a>
 
         <nav className="hidden md:flex flex-1 justify-end gap-8 items-center">
           <div className="flex items-center gap-8">
-            {sections.map((id) => (
+            {SECTIONS.map((id) => (
               <a
                 key={id}
                 href={`#${id}`}
@@ -84,12 +85,10 @@ export default function TopNavBar() {
             ))}
           </div>
           <a
-            href="/CV-FrontEnd.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
             className="flex items-center justify-center rounded-lg h-10 px-5 bg-primary hover:bg-primary/90 text-on-primary text-sm font-bold transition-colors shadow-sm"
           >
-            Resume
+            Contact
           </a>
         </nav>
 
@@ -106,7 +105,7 @@ export default function TopNavBar() {
 
       {mobileMenuOpen && (
         <div className="md:hidden bg-background border-b border-surface-container-high px-6 py-4 flex flex-col gap-4">
-          {sections.map((id) => (
+          {SECTIONS.map((id) => (
             <a
               key={id}
               href={`#${id}`}
@@ -119,13 +118,11 @@ export default function TopNavBar() {
             </a>
           ))}
           <a
-            href="/CV-FrontEnd.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
             onClick={() => setMobileMenuOpen(false)}
             className="flex items-center justify-center rounded-lg h-10 px-5 bg-primary hover:bg-primary/90 text-on-primary text-sm font-bold transition-colors shadow-sm"
           >
-            Resume
+            Contact
           </a>
         </div>
       )}
