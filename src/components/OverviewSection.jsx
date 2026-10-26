@@ -22,15 +22,16 @@ export default function OverviewSection() {
           </h1>
 
           <h2 className="text-xl md:text-2xl font-bold text-on-surface-variant">
-            Junior Web Developer <span className="text-primary font-normal">|</span> React &amp; Spring Boot / Node.js
+            Frontend &amp; Web Developer <span className="text-primary font-normal">(Intern / Fresher)</span>
           </h2>
 
           <p className="text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
-            Final-year Software Engineering student passionate about building
-            clean, responsive web applications and practical AI-assisted features.
-            Hands-on experience in <strong>React</strong>, <strong>TypeScript</strong>,{" "}
-            <strong>Spring Boot</strong>, and integrating <strong>Google Gemini API</strong>{" "}
-            to deliver intuitive user experiences.
+            Final-year Software Engineering student seeking a{" "}
+            <strong>Frontend / Web Developer Intern or Fresher</strong> position.
+            Solid foundation in <strong>React</strong>, <strong>TypeScript</strong>,{" "}
+            and <strong>Tailwind CSS</strong>, with hands-on practice in{" "}
+            <strong>Spring Boot</strong>, <strong>Node.js</strong>, and integrating{" "}
+            <strong>Google Gemini API</strong> for practical features.
           </p>
 
           {/* Key Metric Tags */}

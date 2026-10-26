@@ -100,7 +100,7 @@ export default function AboutSection() {
               About Me
             </div>
             <h2 className="text-3xl md:text-4xl font-bold font-display text-on-surface">
-              Junior Web Developer with Hands-on Experience
+              Frontend &amp; Web Developer (Intern / Fresher)
             </h2>
             <div className="space-y-4 text-on-surface-variant text-base leading-relaxed">
               <p>
@@ -111,7 +111,7 @@ export default function AboutSection() {
                 I focus on building clean, practical web applications using <strong>React</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>, with backend foundations in <strong>Spring Boot (Java)</strong> and <strong>Node.js</strong>.
               </p>
               <p>
-                In my recent projects, I have enjoyed finding practical ways to integrate <strong>Google Gemini API</strong> — using structured prompts to generate JSON schemas for web layouts, decomposing project tasks (WBS), and creating contextual chatbot assistants. I am eager to join a development team as a <strong>Fresher / Junior Developer</strong> to contribute, learn from experienced mentors, and improve my engineering skills.
+                In my recent projects, I have enjoyed finding practical ways to integrate <strong>Google Gemini API</strong> — using structured prompts to generate JSON schemas for web layouts, decomposing project tasks (WBS), and creating contextual chatbot assistants. I am eager to join a development team as a <strong>Frontend / Web Developer Intern or Fresher</strong> to contribute, learn from experienced mentors, and improve my engineering skills.
               </p>
             </div>
 
@@ -178,7 +178,7 @@ export default function AboutSection() {
                 <div>
                   <h4 className="text-sm font-bold text-on-surface">Target Role</h4>
                   <p className="text-xs text-on-surface-variant">
-                    Fresher / Junior Web Developer (Frontend &amp; Fullstack)
+                    Frontend Developer Intern / Fresher (Open to Fullstack)
                   </p>
                 </div>
               </div>

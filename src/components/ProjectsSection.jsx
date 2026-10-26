@@ -4,7 +4,7 @@ const projects = [
   {
     id: "genzite",
     title: "Genzite — AI-Assisted No-Code Website Builder",
-    role: "Frontend / Fullstack Developer (Capstone Project)",
+    role: "Frontend Developer (Capstone Project)",
     roleBadgeColor: "bg-emerald-500/10 text-emerald-700 border-emerald-500/20",
     category: "no-code-builder",
     categoryLabel: "No-Code & Gemini",
@@ -71,7 +71,7 @@ const projects = [
   {
     id: "worksys",
     title: "WorkSys — Smart Task Management & AI Project Copilot",
-    role: "Fullstack Developer",
+    role: "Fullstack Developer (Personal Project)",
     roleBadgeColor: "bg-blue-500/10 text-blue-700 border-blue-500/20",
     category: "kanban-realtime",
     categoryLabel: "Kanban & Real-Time",
@@ -139,7 +139,7 @@ const projects = [
   {
     id: "documentsharing",
     title: "DocumentSharing — Academic Material Platform & AI Study Assistant",
-    role: "Frontend Developer",
+    role: "Frontend Developer (Academic Project)",
     roleBadgeColor: "bg-purple-500/10 text-purple-700 border-purple-500/20",
     category: "study-assistant",
     categoryLabel: "Academic & Assistant",
@@ -501,7 +501,7 @@ export default function ProjectsSection() {
                 <tr className="hover:bg-surface-container-low transition-colors">
                   <td className="p-3.5 font-bold text-primary">1. Genzite</td>
                   <td className="p-3.5 font-medium text-on-surface">
-                    Frontend / Fullstack (Capstone)
+                    Frontend Developer (Capstone Project)
                   </td>
                   <td className="p-3.5 text-on-surface-variant">
                     Drag-and-Drop Canvas, Dynamic JSON schemas (PostgreSQL), S3 Presigned URLs, Admin Console
@@ -513,7 +513,7 @@ export default function ProjectsSection() {
                 <tr className="hover:bg-surface-container-low transition-colors">
                   <td className="p-3.5 font-bold text-primary">2. WorkSys</td>
                   <td className="p-3.5 font-medium text-on-surface">
-                    Fullstack Developer
+                    Fullstack Developer (Personal Project)
                   </td>
                   <td className="p-3.5 text-on-surface-variant">
                     Kanban Board (DnD), Real-time WebSocket/STOMP, Redis Cache-Aside, GitHub Webhook
@@ -525,7 +525,7 @@ export default function ProjectsSection() {
                 <tr className="hover:bg-surface-container-low transition-colors">
                   <td className="p-3.5 font-bold text-primary">3. DocumentSharing</td>
                   <td className="p-3.5 font-medium text-on-surface">
-                    Frontend Developer
+                    Frontend Developer (Academic Project)
                   </td>
                   <td className="p-3.5 text-on-surface-variant">
                     Multi-step Wizard, Client-side Image Compression, Embedded PDF Viewer, VietQR Checkout
