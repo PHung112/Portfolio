@@ -1,6 +1,6 @@
 # Tran Dinh Phi Hung - Portfolio
 
-A modern, responsive portfolio website built with React, Vite, and Tailwind CSS. Showcasing projects, experience, and skills in frontend development.
+A modern, responsive portfolio website built with React, Vite, and Tailwind CSS. Showcasing projects, experience, and skills in software engineering and full-stack development.
 
 ## 🚀 Tech Stack
 

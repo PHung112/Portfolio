@@ -10,10 +10,10 @@ export default function OverviewSection() {
           <div className="flex flex-wrap items-center gap-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-md text-xs">
               <span className="w-2 h-2 rounded-full bg-primary animate-ping"></span>
-              Available for Intern / Fresher Roles
+              Available for Intern / Fresher Roles | Software Engineering
             </div>
             <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-surface-container border border-outline-variant text-on-surface-variant">
-              Frontend &amp; Fullstack
+              Full-Stack &amp; System Testing
             </span>
           </div>
 
@@ -22,23 +22,22 @@ export default function OverviewSection() {
           </h1>
 
           <h2 className="text-xl md:text-2xl font-bold text-on-surface-variant">
-            Frontend &amp; Web Developer <span className="text-primary font-normal">(Intern / Fresher)</span>
+            Software Engineer <span className="text-primary font-normal">(Intern / Fresher)</span>
           </h2>
 
           <p className="text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
-            Final-year Software Engineering student seeking a{" "}
-            <strong>Frontend / Web Developer Intern or Fresher</strong> position.
-            Solid foundation in <strong>React</strong>, <strong>TypeScript</strong>,{" "}
-            and <strong>Tailwind CSS</strong>, with hands-on practice in{" "}
-            <strong>Spring Boot</strong>, <strong>Node.js</strong>, and integrating{" "}
-            <strong>Google Gemini API</strong> for practical features.
+            Final-year Software Engineering student seeking an Intern or
+            Fresher position. Solid foundation in Full-stack development, API
+            integration, and system testing. Experienced in React, Spring Boot,
+            Node.js, and leveraging Google Gemini API to build and test
+            high-quality, practical solutions.
           </p>
 
           {/* Key Metric Tags */}
           <div className="grid grid-cols-3 gap-3 py-2 max-w-lg border-y border-outline-variant/60 my-1">
             <div className="flex flex-col">
               <span className="text-xl font-bold text-primary font-display">3 Projects</span>
-              <span className="text-xs text-on-surface-variant">Hands-on Web Apps</span>
+              <span className="text-xs text-on-surface-variant">Full-Stack &amp; Web Apps</span>
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold text-primary font-display">Gemini API</span>
@@ -96,8 +95,8 @@ export default function OverviewSection() {
             <div className="absolute -top-3 -right-4 bg-surface-container-lowest/95 backdrop-blur-md border border-outline-variant/80 px-4 py-2 rounded-2xl shadow-lg flex items-center gap-2.5">
               <span className="material-symbols-outlined text-primary text-xl">speed</span>
               <div className="text-left">
-                <p className="text-[10px] text-outline uppercase font-bold tracking-wider">Web Features</p>
-                <p className="text-xs font-bold text-on-surface">WebSocket &amp; Redis Cache</p>
+                <p className="text-[10px] text-outline uppercase font-bold tracking-wider">Full-Stack &amp; APIs</p>
+                <p className="text-xs font-bold text-on-surface">Spring Boot &amp; Node.js</p>
               </div>
             </div>
           </div>

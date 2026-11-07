@@ -2,20 +2,16 @@ import { useState } from "react";
 
 const skillCategories = [
   {
-    category: "Programming Languages",
-    icon: "code",
-    skills: ["JavaScript (ES6+)", "TypeScript", "Java", "HTML5 / CSS3"],
-  },
-  {
     category: "Frontend Development",
     icon: "web",
     skills: [
       "React (18 / 19)",
       "TypeScript",
+      "JavaScript (ES6+)",
       "Tailwind CSS",
-      "Bootstrap",
-      "Drag-and-Drop (DnD)",
+      "HTML5 / CSS3",
       "Responsive Design",
+      "Drag-and-Drop (DnD)",
       "State Management",
     ],
   },
@@ -27,6 +23,7 @@ const skillCategories = [
       "Spring Boot",
       "Node.js",
       "RESTful APIs",
+      "API Integration",
       "WebSocket (STOMP)",
       "Spring Security (JWT)",
     ],
@@ -40,7 +37,18 @@ const skillCategories = [
       "Structured JSON Parsing",
       "AI Chatbots",
       "Markdown Rendering",
-      "Basic Token Logging",
+      "Token & Context Optimization",
+    ],
+  },
+  {
+    category: "System Testing & Quality",
+    icon: "verified",
+    skills: [
+      "System Testing",
+      "API Testing (Postman)",
+      "Swagger / OpenAPI",
+      "Unit & Integration Testing",
+      "Test Cases & Bug Tracking",
     ],
   },
   {
@@ -49,21 +57,21 @@ const skillCategories = [
     skills: [
       "PostgreSQL",
       "MySQL",
+      "SQL Server",
       "MongoDB",
       "Redis (Cache-Aside)",
       "Spring Data JPA",
     ],
   },
   {
-    category: "Tools, Cloud & Deploy",
+    category: "Cloud, DevOps & Tools",
     icon: "cloud_sync",
     skills: [
       "Docker",
       "AWS (S3, EC2, RDS cơ bản)",
       "Git & GitHub (Webhooks)",
-      "Postman",
-      "Swagger / OpenAPI",
-      "VietQR",
+      "CI/CD Basics",
+      "VietQR Integration",
     ],
   },
 ];
@@ -73,11 +81,12 @@ export default function AboutSection() {
 
   const rawResumeSkills = `TECHNICAL SKILLS
 • Programming Languages: JavaScript (ES6+), TypeScript, Java, HTML5/CSS3
-• Frontend Development: React, TypeScript, Tailwind CSS, Bootstrap, HTML5/CSS3, Responsive Design, Drag-and-Drop
-• Backend & APIs: Java, Spring Boot, Node.js, RESTful APIs, WebSocket (STOMP), Spring Security (JWT)
-• AI Integration: Google Gemini API, Prompt Engineering, Structured JSON Parsing, AI Chatbots, Markdown Rendering, Basic Token Logging
-• Databases & Caching: PostgreSQL, MySQL, MongoDB, Redis (Cache-Aside), Spring Data JPA
-• Tools & Deployment: Docker, AWS (S3, EC2, RDS cơ bản), Git/GitHub (Webhooks), Postman, Swagger, VietQR`;
+• Frontend Development: React, TypeScript, Tailwind CSS, Responsive Design, Drag-and-Drop
+• Backend & APIs: Java, Spring Boot, Node.js, RESTful APIs, API Integration, WebSocket (STOMP), Spring Security (JWT)
+• AI Integration: Google Gemini API, Prompt Engineering, Structured JSON Parsing, AI Chatbots
+• Testing & QA: System Testing, API Testing (Postman/Swagger), Unit & Integration Testing
+• Databases & Caching: PostgreSQL, MySQL, SQL Server, MongoDB, Redis (Cache-Aside), Spring Data JPA
+• Cloud & Tools: Docker, AWS (S3, EC2, RDS cơ bản), Git/GitHub (Webhooks), CI/CD basics, VietQR`;
 
   const handleCopySkills = () => {
     navigator.clipboard.writeText(rawResumeSkills);
@@ -100,7 +109,7 @@ export default function AboutSection() {
               About Me
             </div>
             <h2 className="text-3xl md:text-4xl font-bold font-display text-on-surface">
-              Frontend &amp; Web Developer (Intern / Fresher)
+              Software Engineer (Intern / Fresher)
             </h2>
             <div className="space-y-4 text-on-surface-variant text-base leading-relaxed">
               <p>
@@ -108,10 +117,10 @@ export default function AboutSection() {
                 <strong>Ho Chi Minh City University of Technology (HUTECH)</strong>, graduating in 2026 with a GPA of 3.39/4.0 and recognized as an <em>Outstanding Student of the Year (2024, 2025)</em>.
               </p>
               <p>
-                I focus on building clean, practical web applications using <strong>React</strong>, <strong>TypeScript</strong>, and <strong>Tailwind CSS</strong>, with backend foundations in <strong>Spring Boot (Java)</strong> and <strong>Node.js</strong>.
+                Solid foundation in <strong>Full-stack development</strong>, <strong>API integration</strong>, and <strong>system testing</strong>. Experienced in <strong>React</strong>, <strong>Spring Boot</strong>, <strong>Node.js</strong>, and leveraging <strong>Google Gemini API</strong> to build and test high-quality, practical solutions.
               </p>
               <p>
-                In my recent projects, I have enjoyed finding practical ways to integrate <strong>Google Gemini API</strong> — using structured prompts to generate JSON schemas for web layouts, decomposing project tasks (WBS), and creating contextual chatbot assistants. I am eager to join a development team as a <strong>Frontend / Web Developer Intern or Fresher</strong> to contribute, learn from experienced mentors, and improve my engineering skills.
+                In my recent projects, I have implemented clean end-to-end features: from intuitive drag-and-drop React UIs to scalable Spring Boot backends, real-time WebSockets, and AI workflows using Google Gemini API. I am eager to join a development team as a <strong>Software Engineer Intern or Fresher</strong> to build reliable systems and create tangible impact.
               </p>
             </div>
 
@@ -123,17 +132,17 @@ export default function AboutSection() {
                   Self-Learning &amp; Adaptability
                 </div>
                 <p className="text-xs text-on-surface-variant leading-relaxed">
-                  Quick to pick up new frameworks, read official documentation, and apply practical solutions using React, Spring Boot, and cloud basics.
+                  Quick to master new frameworks, read official documentation, and apply practical solutions across React, Spring Boot, Node.js, and cloud platforms.
                 </p>
               </div>
 
               <div className="p-4 rounded-xl border border-outline-variant bg-surface-container-low flex flex-col gap-2">
                 <div className="flex items-center gap-2 text-primary font-bold text-sm">
-                  <span className="material-symbols-outlined text-lg">build</span>
-                  Hands-on Problem Solving
+                  <span className="material-symbols-outlined text-lg">verified</span>
+                  System Testing &amp; Problem Solving
                 </div>
                 <p className="text-xs text-on-surface-variant leading-relaxed">
-                  Focused on real user needs: client-side image compression, real-time WebSocket state updates, Redis caching, and S3 Presigned URLs.
+                  Focus on robust API integration, thorough system testing, client-side optimizations, and building reliable, scalable full-stack applications.
                 </p>
               </div>
             </div>
@@ -178,7 +187,7 @@ export default function AboutSection() {
                 <div>
                   <h4 className="text-sm font-bold text-on-surface">Target Role</h4>
                   <p className="text-xs text-on-surface-variant">
-                    Frontend Developer Intern / Fresher (Open to Fullstack)
+                    Software Engineer Intern / Fresher (Full-Stack &amp; Testing)
                   </p>
                 </div>
               </div>
